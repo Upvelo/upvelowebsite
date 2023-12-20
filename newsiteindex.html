@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPvelo</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  .header {
+    background-color: #6C5CE7; /* Purple background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  .logo{
+    background-color: ;
+    max-height: 35px;
+    width: 37%;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0px;
+    margin-left: ;
+  }
+  .logo img {
+    padding-left: 0px;
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+  .nav {
+    display: flex;
+  }
+  .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1em;
+  }
+  .main {
+    background: linear-gradient(180deg, #5c6bc0 0%, #42a5f5 100%); /* Assuming this is the main color of your theme */
+    padding: 0;
+    margin: 5px 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5% 5% 0 0;
+  }
+  .main img{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 70%;
+    height: auto;
+  }
+#offers {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    height: auto; /* Maintain aspect ratio */
+    width: 70%; /* Responsive image width */
+    border-radius: 5%; /* Rounded corners as requested */
+    margin-top: 20px;
+    margin-bottom: 0; /* Space between images */
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+#inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    height: 120px; /* Maintain aspect ratio */
+    width: 78%; /* Responsive image width */
+    border-radius: 5% 5% 5% 5%; /* Rounded corners as requested */
+    margin-top: 0;
+    margin-bottom: 0; /* Space between images */
+    background-size: contain;
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    border: 2px;
+  }
+img { 
+    height: auto; /* Maintain aspect ratio */
+    width: 90%; /* Responsive image width */
+    border-radius: 5%; /* Rounded corners as requested */
+    margin-bottom: 0; /* Space between images */
+    background-size: cover;
+    border: transparent;
+
+  }
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .nav a {
+      padding: 0.5em 0;
+      margin: 3px;
+    }
+  }
+.favorite { /* Container for content */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 5px 5px 5px;
+  padding-bottom: 5px;
+  background: linear-gradient(360deg, #5c6bc0 0%, #42a5f5 100%); /* Assuming this is the main color of your theme *//* Replace with your background color */
+  color: whitesmoke; /* Replace with your text color */
+  border: transparent;
+  border-radius: 0 0 5% 5%;
+  width: auto;
+  height: auto;
+  
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.favorite h1 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+.favorite p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50; /* Replace with your button background color */
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #367c39; /* Darker shade for hover/focus state */
+  cursor: pointer;
+}
+/* Utility classes for spacing */
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+/* Responsive design */
+@media (max-width: 768px) {
+  .favorite h1 {
+    font-size: 2rem;
+  }
+  .favorite p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 8px 20px;
+    font-size: 1rem;
+  }
+}
+/*------------------stats container----------------*/
+.stats-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(180deg, #5c6bc0 0%, #42a5f5 100%);
+    color: whitesmoke;
+    padding-bottom:10px;
+    border-radius: 5% 5% 5% 5%;
+    margin: 5px;
+}
+.stats-container h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: whitesmoke;
+}
+.stats-container h2 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #452a7a;
+}
+.stat {
+    margin-bottom: 1.5em;
+}
+.stat p .number{
+    font-size: 2.5em;
+}
+.number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #CDA2D3; /* Soft purple for numbers */
+}
+/*-----------------image-service----------------------*/
+.container-service-title{
+margin: 0;
+    background-color: #5c6bc0;
+    text-align: center;
+    margin-bottom: 0;
+    margin: 0 5px 0 5px;
+    margin-top: O;  
+  }
+  .container-service-title h2{
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: transparent;
+  }
+.image-service {
+    background: linear-gradient(360deg, #5c6bc0 0%, #42a5f5 100%);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+    border-radius: 5% 5% 0 0;
+    margin: 5px 5px 0 5px;
+
+    padding-top: 20px;
+}
+.image-service img{
+    border-radius: 5%;
+    border: none;
+}
+.container-service {
+    display: grid;
+    background-color: #5c6bc0;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    grid-gap: 5px;
+    height: auto;
+    width: auto;
+    margin-top: 0;
+    padding-top: none;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    border-radius: 0 0 5% 5%;
+    padding-bottom: 5%; 
+    border: none;
+
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: ;
+    text-align: center;
+    margin-bottom: ;
+    background-color: ;
+    min-height: auto;
+    width: auto;
+    margin-top: 0;
+  }
+  .service-icon {
+    width: 70%; /* Adjust as necessary */
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+    cursor: pointer;
+    background-color: ;
+    padding: 5px;
+  }
+  .service-text {
+    height: auto;
+    justify-content: center;
+    word-wrap: break-word;
+    background-color: ;
+    color: whitesmoke;
+  }
+  .service-text h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .service-text h3 strong{
+    margin-top: 0;
+  }
+  .service-text p{
+    margin: 0;
+    font-size: small;
+    background-color: ;
+    padding: 5px; 
+    min-width: ;
+    min-height: 60px;
+    text-align: left;
+  }
+  .service a {
+    color: #00d1b2;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+  }
+  .service a:hover {
+    text-decoration: underline;
+  }
+/* Styles pour le pied de page */
+footer {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background-color: #1F2E3D; /* Bleu foncé pour le pied de page */
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 0;
+}
+/* Responsive design adjustments, if necessary */
+@media (max-width: 600px) {
+    .number {
+        font-size: 1.5em;
+    }
+}
+/* Notre service d'entretien général <br>garantit que votre vélo est toujours en parfait état de fonctionnement.*/
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo"><img src="images/logotransparent.png">
+</div>
+  <nav class="nav">
+    <a href="#home"><i class="fa fa-home"></i></a>
+    <a href="#services">Services</a>
+    <a href="#products">Produits</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+<div class="main">
+    <div id="offers">
+  <!-- Placeholder image with rounded borders; replace with actual image source later -->
+      <div id="inside"></div>
+    </div>
+  <!-- Second placeholder image with rounded borders; replace with actual image source later -->
+  <img src="images/mascotte.png" alt="Description of image 2">
+</div>
+<div class="favorite">
+  <h1>Le Service à Domicile Preferé <br> Des Poitevins!</h1>
+  <p>Posez nous vos Questions, Notez nous</p>
+    <div buttonscontainer>
+    <a href="#connectWallet" class="btn">Demandez un devis</a>
+    <a href="#tradeNow" class="btn">Prise de RDV</a>
+    </div>
+</div>    
+<div class="stats-container">
+        <h1>RETROUVEZ LE PLAISIR DE ROULER</h1>
+        <h2>UPvelo vous assiste ou que vous soyez!</h2>
+        
+        <div class="stat">
+            <p>Nombre D'Usagers:</p>
+            <p class="number">1,286,543</p>
+            <p>dans les derniers 12 mois</p>
+        </div>
+        
+        <div class="stat">
+            <p>Total de Reparations:</p>
+            <p class="number">19,328,842</p>
+            <p>Depuis 2019</p>
+        </div>
+        
+    </div>
+</div>
+<div class="image-service">
+    <img src="images/fun.jpeg"></a>
+</div>
+<div class="container-service-title"><h2>Decouvrez nos Services</h2>
+  </div>
+<div class="container-service">
+  <div class="service">
+    <img src="images/service-entretien.png" alt="Swap Icon" class="service-icon">
+    </a> 
+      <h3><strong>Entretien</strong></h3>
+      <p>Notre service d'entretien garantit que votre vélo est toujours en parfait état de fonctionnement.</p>
+      <a href="entretien.html">Info  ></a>
+    </div>
+  <div class="service">
+    <img src="images/mims.png" alt="Swap Icon" class="service-icon">
+      <h3>Révision</h3>
+      <p>Des révisions complètes <br>pour assurer la longévité et les performances de votre vélo.</p>
+      <a href="link-to-swap-service">Info  ></a>
+    </div>
+    <div class="service">
+    <img src="images/service-reparation.png" alt="Swap Icon" class="service-icon">
+      <h3>Réparation</h3>
+      <p>Des réparations rapides et fiables pour tous les types de vélos.</p>
+      <a href="link-to-swap-service">Info  ></a>
+    </div>
+  <div class="service">
+    <img src="images/depannage.png" alt="Swap Icon" class="service-icon">
+      <h3>Dépannage</h3>
+      <p>Assistance rapide en cas de panne inattendue, pour que vous puissiez reprendre la route sans délai.</p>
+      <a href="link-to-swap-service">Info  ></a>
+    </div>
+  <div class="service">
+    <img src="images/devis.png" alt="Swap Icon" class="service-icon">
+      <h3>Diagnostic</h3>
+      <p>Identification précise des problèmes avec des solutions adaptées à vos besoins.</p>
+      <a href="link-to-swap-service">Info  ></a>
+    </div>
+  <div class="service">
+    <img src="images/coins.png" alt="Swap Icon" class="service-icon">
+      <h3>Devis</h3>
+      <p>Identification précise des problèmes avec des solutions adaptées à votre budget.</p>
+      <a href="link-to-swap-service">Info  ></a>
+    </div>
+  <!-- Repeat for each service --> 
+</div>
+<!----------------------partenaires---------------------- -->
+<section class="container-main">
+    <div class="title-partenaires">
+        <div class="title">
+            <h1>Partenaires</h1>
+        </div>
+    </div>      
+ <div class="container-">
+    <div id="scroll-container">
+        <div class="scroll-content"><img src="images/boulanger.png">
+        </div>
+         <div class="scroll-content"><img src="images/Vélotaf.jpeg">
+         </div>
+         <div class="scroll-content"><img src="images/greenon.jpeg">
+         </div> 
+         <div class="scroll-content"><img src="images/france3.jpeg">
+         </div>
+         <div class="scroll-content"><img src="images/solvarea.jpeg">
+         </div> 
+         <div class="scroll-content"><img src="images/crous.jpeg">
+         </div>
+         <div class="scroll-content"><img src="images/grandpoitiers.jpeg">
+         </div> 
+         <div class="scroll-content"><img src="images/grandpoitiers.jpeg">
+         </div> 
+         <div class="scroll-content"><img src="images/grandpoitiers.jpeg">
+         </div> 
+         <div class="scroll-content"><img src="images/grandpoitiers.jpeg">
+         </div>
+    </div>
+ </div>
+ <style type="text/css">      
+        section .container-main{
+            margin-top: 20px;
+        }
+        .container-main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            background-image: url(images/Partenaires.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;  
+            margin: 5px;
+            margin-left: 0;
+            border-radius: 5%;
+            height: 380px;
+            width: ; 
+            padding-top: 0;
+            margin-top: 0;   
+        }
+        .container-{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            width: 90%;
+            margin: 0;
+        }
+        .title-partenaires h1{
+            margin-bottom: 0;
+            font-size: 32px;
+        }
+        .title-partenaires .title{
+            text-align: center;
+            font-size: ;
+            color: whitesmoke;
+            margin-bottom: 0;
+        }
+        section .container img{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+        #scroll-container {
+            height: 70px;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            white-space: nowrap;
+            margin-top: 315px;
+  }
+  .scroll-content {
+    display: inline-block;
+    margin-left: 10px;/* Espace entre les éléments */
+    width: auto; /* La largeur de vos images */
+    height: auto; /* La hauteur de vos images */
+  }
+  .scroll-content img {
+        height: auto;
+        width: 50px;
+        display: block;
+  }
+    </style>
+</section>
+<div class="opening-hours">
+    <style type="text/css">
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  background-image: url(images/hiver.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: linear-gradient(180deg, #5c6bc0 0%, #42a5f5 100%);
+  border-radius: 5%;
+  color: whitesmoke;
+  padding: 20px;
+  width: auto;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.opening-hours h2 {
+  margin: 0 0 10px 0;
+}
+
+.opening-hours ul {
+  list-style: none;
+  padding: 0;
+}
+
+.opening-hours li {
+  margin-bottom: 5px;
+}
+</style>
+  <h2>Heures d'ouverture</h2>
+  <ul>
+    <li>Lundi: 10:00–20:00</li>
+    <li>Mardi: 10:00–20:00</li>
+    <li>Mercredi: 10:00–20:00</li>
+    <li>Jeudi: 10:00–20:00</li>
+    <li>Vendredi: 10:00–20:00</li>
+    <li>Samedi: 11:00-18:00</li>
+    <li>Dimanche: Fermé</li>
+  </ul>
+</div>
+
+
+<footer>
+        <p>&copy; 2023 UPvelo</p>
+</footer>   
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollContainer = document.getElementById('scroll-container');
+  const scrollElements = document.getElementsByClassName('scroll-content');
+
+  function scrollHorizontally() {
+    // Si l'élément le plus à gauche est hors de vue, déplacez-le à droite.
+    if (scrollElements[0].getBoundingClientRect().right < 0) {
+      scrollContainer.appendChild(scrollElements[0]);
+      scrollContainer.scrollLeft -= scrollElements[0].offsetwidth;
+  }
+    scrollContainer.scrollLeft += 1;
+  }
+
+  setInterval(scrollHorizontally, 15);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var images = [
+        'images/IMG_0252.png',  // Replace with your image paths
+        'images/IMG_0099.jpeg',
+        'images/entretien.png'
+    ];
+
+    var currentIndex = 0;
+
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('inside').style.backgroundImage = 'url("' + images[currentIndex] + '")';
+    }, 1000); // Change image every 3000 milliseconds (3 seconds)
+});
+</script>
+
+</body>
+</html>
